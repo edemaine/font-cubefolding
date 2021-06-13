@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    title Cube Folding Font
+    script(type="text/javascript", src="node_modules/@svgdotjs/svg.js/dist/svg.min.js")
+    script(type="text/javascript", src="node_modules/furls/furls.js")
+    script(type="text/javascript", src="node_modules/font-webapp/font-webapp.js")
+    script(type="text/javascript", src="font.js")
+    script(type="text/javascript", src="index.js")
+    style
+      :stylus
+        @media print
+          .noprint
+            display: none
+
+        .w-100
+          width: 100%
+        textarea
+          vertical-align: middle
+
+        svg
+          width: 100%
+          height: 100%
+    //#include virtual="../../analytics.html"
+  body
+    table.w-100
+      tr
+        td(style="text-align: left; vertical-align: middle;")
+          h1 Cube Folding Font
+        td(style="text-align: right; vertical-align: middle;")
+          h2 by <a href="http://www.igi.tugraz.at/oaich/">Oswin Aichholzer</a>, <a href="https://www.eecs.tufts.edu/~halves01/">Hugo Akitaya</a>, <a href="http://people.csail.mit.edu/kenny/">Kenneth Cheung</a>, <a href="http://erikdemaine.org/">Erik Demaine</a>, <a href="http://martindemaine.org/">Martin Demaine</a>, <a href="http://www.math.tu-bs.de/~fekete/index.en.html">S&aacute;ndor Fekete</a>, <a href="https://www.ibr.cs.tu-bs.de/users/kleist/">Linda Kleist</a>, <a href="https://www.win.tue.nl/~ikostits/">Irina Kostitsyna</a>, <a href="http://www.staff.science.uu.nl/~loffl001/about.html">Maarten L&ouml;ffler</a>, Zuzana Mas&aacute;rov&aacute;, Klara Mundilova, and <a href="http://webstaff.itn.liu.se/~chrsc91/">Christiane Schmidt</a>
+
+    table#data.noprint.w-100
+      tr
+        td
+          label(for="text") Enter text to render:
+          | &nbsp;
+          textarea#text(name="text", rows=4, cols=40) text
+
+    p
+
+    #output.w-100
+      svg#svg
+        defs
+          include font-inline.svg
+
+    hr.noprint
+
+    p.noprint.
+      &ldquo;<a href="http://erikdemaine.org/papers/CubeFoldingHoles_CGTA/">Folding Polyominoes with Holes into a Cube</a>&rdquo;, <i><a href="http://www.elsevier.com/locate/issn/09257721">Computational Geometry: Theory and Applications</a></i>, volume 93, February 2021, Article 101700.  </dd>
+
+    p.noprint.
+      Check out <a href="http://erikdemaine.org/fonts/">other mathematical and
+      puzzle fonts</a>. &bull; Feedback or not working?
+      <a href="mailto:edemaine+fonts@mit.edu">Email Erik</a>.
