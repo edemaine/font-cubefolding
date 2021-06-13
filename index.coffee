@@ -1,6 +1,3 @@
-letterURL = (letter) ->
-  "#fu-#{letter}"
-
 window?.onload = ->
   app = new FontWebappSVG
     root: '#output'
