@@ -15,3 +15,6 @@ window?.onload = ->
       element: use
       width: glyph.width
       height: glyph.height
+
+  document.getElementById 'downloadSVG'
+  .addEventListener 'click', -> app.downloadSVG 'cubefolding.svg'
