@@ -33,7 +33,7 @@ for file in fs.readdirSync dir
       ''
   .replace /\bhref="#([^"]*)"/g, (href, id) ->
     "href=\"##{map[id]}\""
-  .replace /<svg[^<>]*>/, "<symbol id=\"fu-#{letter}\">"
+  .replace /<svg[^<>]*>/, "<symbol id=\"fu-#{letter}\" overflow=\"visible\">"
   .replace /<\/svg>/, '</symbol>'
   outSVG.push svg
 
